@@ -14,3 +14,6 @@ urlpatterns = [
     path('api/students/<int:id>/registrations', StudentRegistrationsListView.as_view()),
     path('api/faculty-assignments', FacultyCourseAssignmentCreateView.as_view()),
 ]
+emesterRegistrationCreateView(generics.CreateAPIView):
+    queryset = SemesterRegistration.objects.all()
+    serializer_class = SemesterRegistrationSeria
